@@ -14,14 +14,28 @@ function getComputerChoice () {
     }
 }
 
-function game() {
+function game () {
 
-    function playRound(playerSelection, computerSelection) {
-        // your code here!
+for (i = 0; i < 6; i++) {
+
+function playRound(playerSelection, computerSelection) {
+    let computerSelection = getComputerChoice
+    let playerScore = 0
+    let computerScore = 0
+    if (playerSelection == 'rock' && computerSelection == 'scissors' || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+        playerScore +=1
+        return "Congrats! " + playerSelection + "beats " + computerSelection + "!"
     }
-    
-    const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
+    if (playerSelection == computerSelection) {
+            return "It's a tie!"
+    }
+    else {
+        computerScore +=1
+        return "Aww... " + computerSelection + "beats " + playerSelection + "!"
+    }
+}
 
 }
+
+}
+    
